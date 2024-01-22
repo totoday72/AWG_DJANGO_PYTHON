@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block contenido %}
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                <tr>
+                    <th>codigo Agencia</th>
+                    <th>Agencia</th>
+                    <th>Direccion</th>
+                </tr>
+                </thead>
+                <tbody> {% for item in obj %}
+                    <tr>
+                        <td>{{ item.agecod }}</td>
+                        <td>{{ item.agenom }}</td>
+                        <td>{{ item.direccion }}</td>
+                    </tr> {% endfor %} </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock contenido %}
