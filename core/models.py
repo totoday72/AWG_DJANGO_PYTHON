@@ -29,3 +29,19 @@ class Rhempleado(models.Model):
     class Meta:
         verbose_name_plural = 'rhempleados'
         unique_together = ('agecod', 'nombres')
+
+
+class Rhmotiv(models.Model):
+    codmot = models.IntegerField(primary_key=True, help_text='Id del motivo', unique=True)
+    # agecod = models.ForeignKey(Rhagencia, on_delete=models.CASCADE)
+    nommot = models.CharField(max_length=100, help_text='Descripcion de Motivo')
+
+    def __str__(self):
+        return '{}:{}'.format(self.codmot, self.nommot)
+
+    def save(self):
+        super(Rhmotiv, self).save()
+
+    class Meta:
+        verbose_name_plural = 'Rhmotiv'
+        unique_together = ('codmot', 'nommot')

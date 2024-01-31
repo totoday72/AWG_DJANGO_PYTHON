@@ -75,9 +75,23 @@
                         <a href="#"><i class="fa fa-cogs fa-fw"></i> Nombre de modulo <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-
                                 <a href="{% url 'core:agencia_list' %}">Agencias</a>
                                 <a href="{% url 'core:empleado_list' %}">Empleados</a>
+                            </li>
+                            <li>
+                                <a>Recursos Humanos <span class="fa arrow"></span></a>
+                                <ul class="nav nav-stacked">
+                                    <li>
+                                        <a> Parametrizacion <span class="fa arrow"></span> </a>
+                                        <ul class="nav nav-second-level">
+                                            <li>
+                                                <a href="{% url 'core:rhmotiv_list' %}">Mantenimiento de Motivos</a>
+                                                <a href="{% url 'core:empleado_list' %}">Mantenimiento de Profesiones</a>
+                                                <a href="{% url 'core:empleado_list' %}">Mantenimiento de Academincos</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
