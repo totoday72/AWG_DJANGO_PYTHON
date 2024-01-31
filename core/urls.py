@@ -1,6 +1,6 @@
 from django.urls import path
 
-from core.views import AgenciaView, EmpleadosView, EmpleadosNew, EmpleadosEdit, MotivoNew, Motivosview, MotivoEdit
+from core.views import AgenciaView, EmpleadosView, EmpleadosNew, EmpleadosEdit, MotivoNew, Motivosview, MotivoEdit, MotivoDel
 
 urlpatterns = [path('core', AgenciaView.as_view(), name='agencia_list'),
 
@@ -12,5 +12,6 @@ urlpatterns = [path('core', AgenciaView.as_view(), name='agencia_list'),
                path('motivo', Motivosview.as_view(), name='rhmotiv_list'),
                path('motivo/new', MotivoNew.as_view(), name='rhmotiv_new'),
                path('motivo/edit/<int:pk>', MotivoEdit.as_view(), name='rhmotiv_edit'),
+               path('motivo/delete/<int:pk>', MotivoDel.as_view(), name='rhmotiv_del'),
 
                ]

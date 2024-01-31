@@ -71,3 +71,11 @@ class MotivoEdit(SuccessMessageMixin, LoginRequiredMixin, SinPrivilegios, generi
     form_class = Rhmotiv_Form
     success_url = reverse_lazy("core:rhmotiv_list")
     success_message = "Motivo Actualizado Satisfactoriamente"
+
+
+class MotivoDel(SuccessMessageMixin, LoginRequiredMixin, SinPrivilegios, generic.DeleteView):
+    permission_required = "core.add_rhmotiv"
+    model = Rhmotiv
+    template_name = "core/rhmotiv_del.html"
+    context_object_name = 'obj'
+    success_url = reverse_lazy("core:rhmotiv_list")
