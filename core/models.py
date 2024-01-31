@@ -45,3 +45,4 @@ class Rhmotiv(models.Model):
     class Meta:
         verbose_name_plural = 'Rhmotiv'
         unique_together = ('codmot', 'nommot')
+        # db_table = 'core_Rhmotiv'
